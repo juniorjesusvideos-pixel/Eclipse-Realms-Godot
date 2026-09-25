@@ -60,8 +60,9 @@ shape = SubResource("RectangleShape2D_player")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 enabled = true
 zoom = Vector2(0.88, 0.88)
+process_callback = 0
 position_smoothing_enabled = true
-position_smoothing_speed = 6.0
+position_smoothing_speed = 8.5
 limit_left = -2200
 limit_top = -1400
 limit_right = 2200
