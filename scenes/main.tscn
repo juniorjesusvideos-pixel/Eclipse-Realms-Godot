@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource path="res://scripts/main.gd" type="Script" id="1_main"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+
+[node name="Title" type="Label" parent="."]
+position = Vector2(420, 300)
+text = "Eclipse Realms - Base Godot 4"
+
+[node name="Hint" type="Label" parent="."]
+position = Vector2(430, 350)
+text = "Projeto carregado com sucesso"
