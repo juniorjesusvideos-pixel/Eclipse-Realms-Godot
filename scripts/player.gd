@@ -16,15 +16,15 @@ func _unhandled_input(event: InputEvent) -> void:
             touch_id = -1
             touch_direction = Vector2.ZERO
     elif event is InputEventScreenDrag and event.index == touch_id:
-        var delta := event.position - touch_origin
-        if delta.length() > 18.0:
-            touch_direction = delta.normalized()
+        var drag_delta: Vector2 = event.position - touch_origin
+        if drag_delta.length() > 18.0:
+            touch_direction = drag_delta.normalized()
         else:
             touch_direction = Vector2.ZERO
 
 func _physics_process(_delta: float) -> void:
-    var keyboard_direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
-    var direction := keyboard_direction
+    var keyboard_direction: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+    var direction: Vector2 = keyboard_direction
     if direction == Vector2.ZERO:
         direction = touch_direction
     velocity = direction * speed
